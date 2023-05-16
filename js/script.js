@@ -19,7 +19,7 @@ function calculate() {
     remainder -= number2
     counter++
   }
-  answer = counter;
+  answer = counter
 
   // output
   document.getElementById("numberEntered").innerHTML =
