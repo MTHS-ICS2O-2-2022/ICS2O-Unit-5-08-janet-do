@@ -22,6 +22,9 @@ function calculate() {
   answer = counter
 
   // output
-  document.getElementById("numberEntered").innerHTML =
-    number1 + " / " + number2 + " = " + answer + " R:" + remainder
+  if (remainder > 0) {
+    document.getElementById('answer').innerHTML = number1 + " ÷ " + number2 + " = " + answer + " R: " + remainder + "."
+  } else {
+    document.getElementById('answer').innerHTML = number1 + " ÷ " + number2 + " = " + answer + "R:" + remainder + "."
+  }
 }
