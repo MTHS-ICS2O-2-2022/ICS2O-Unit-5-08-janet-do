@@ -25,6 +25,6 @@ function calculate() {
   if (remainder > 0) {
     document.getElementById('answer').innerHTML = number1 + " ÷ " + number2 + " = " + answer + " R: " + remainder 
   } else {
-    document.getElementById('answer').innerHTML = number1 + " ÷ " + number2 + answer + " = " + "."
+    document.getElementById('answer').innerHTML = number1 + " ÷ " + number2 + " = " + answer + "."
   }
 }
