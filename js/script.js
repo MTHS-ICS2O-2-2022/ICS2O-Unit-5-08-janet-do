@@ -23,7 +23,7 @@ function calculate() {
 
   // output
   if (remainder > 0) {
-    document.getElementById('answer').innerHTML = number1 + " ÷ " + number2 + " = " + answer + " R: " + remainder + 
+    document.getElementById('answer').innerHTML = number1 + " ÷ " + number2 + " = " + answer + " R: " + remainder 
   } else {
     document.getElementById('answer').innerHTML = number1 + " ÷ " + number2 + " = " + "."
   }
