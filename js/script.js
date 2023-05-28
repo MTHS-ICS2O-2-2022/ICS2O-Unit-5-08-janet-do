@@ -7,11 +7,15 @@
 function calculate() {
   // This function divides two numbers
 
-  // input
+  // Input
   const number1 = parseInt(document.getElementById("number1").value)
   const number2 = parseInt(document.getElementById("number2").value)
 
-  // process
+  // Save input values to localStorage
+  localStorage.setItem("number1", number1)
+  localStorage.setItem("number2", number2)
+
+  // Process
   let counter = 0
   let answer = 0
   let remainder = number1
@@ -21,10 +25,25 @@ function calculate() {
   }
   answer = counter
 
-  // output
+  // Output
   if (remainder > 0) {
-    document.getElementById('answer').innerHTML = number1 + " ÷ " + number2 + " = " + answer + " R: " + remainder 
+    document.getElementById('answer').innerHTML = number1 + " ÷ " + number2 + " = " + answer + " R: " + remainder
   } else {
     document.getElementById('answer').innerHTML = number1 + " ÷ " + number2 + " = " + answer + "."
   }
 }
+
+// Retrieve saved input values when the page is loaded
+window.onload = function () {
+  const savedNumber1 = localStorage.getItem("number1")
+  const savedNumber2 = localStorage.getItem("number2")
+
+  if (savedNumber1 !== null) {
+    document.getElementById("number1").value = savedNumber1
+  }
+
+  if (savedNumber2 !== null) {
+    document.getElementById("number2").value = savedNumber2
+  }
+}
+
